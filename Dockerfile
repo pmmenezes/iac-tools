@@ -21,7 +21,7 @@ RUN wget https://github.com/gruntwork-io/terragrunt/releases/download/${TERRAGRU
 
 ## Terraform Docs
 ARG TERRAFORM_DOCS_VERSION=v0.17.0 
-RUN wget https://github.com/terraform-docs/terraform-docs/releases/download/v0.17.0/terraform-docs-${TERRAFORM_DOCS_VERSION}-linux-amd64.tar.gz && \
+RUN wget https://github.com/terraform-docs/terraform-docs/releases/download/${TERRAFORM_DOCS_VERSION}/terraform-docs-${TERRAFORM_DOCS_VERSION}-linux-amd64.tar.gz && \
     tar -xzf terraform-docs-${TERRAFORM_DOCS_VERSION}-linux-amd64.tar.gz && \
     chmod +x terraform-docs && \
     mv terraform-docs /usr/local/bin/terraform-docs && \
