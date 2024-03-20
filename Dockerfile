@@ -26,4 +26,13 @@ RUN wget https://github.com/terraform-docs/terraform-docs/releases/download/${TE
     chmod +x terraform-docs && \
     mv terraform-docs /usr/local/bin/terraform-docs && \
     rm -f terraform-docs.terraform-docs-${TERRAFORM_DOCS_VERSION}-linux-amd64.tar.gz 
+
+## Opentofu
+ARG TOFU_VERSION=1.6.2
+RUN wget https://github.com/opentofu/opentofu/releases/download/v${TOFU_VERSION}/tofu_${TOFU_VERSION}_amd64.apk && \
+    apk add --allow-untrusted tofu_*.apk && \ 
+    rm  -f install-opentofu.sh 
+ 
+ 
 WORKDIR /projeto
+
