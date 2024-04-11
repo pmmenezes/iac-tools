@@ -1,5 +1,4 @@
 FROM cgr.dev/chainguard/wolfi-base 
-#alpine:latest
 ARG PRODUCT=terraform
 ARG VERSION=1.7.5
 ## Install terraform 
@@ -36,3 +35,4 @@ RUN wget https://github.com/opentofu/opentofu/releases/download/v${TOFU_VERSION}
 
 WORKDIR /projeto
 
+RUN apk add --no-cache bash git
